@@ -15,7 +15,7 @@
 <meta property="og:locale" content="fr_TN">
 <meta property="profile:first_name" content="Yathreb">
 <meta property="profile:last_name" content="Dellai">
-<meta name="twitter:card" content="summaryO">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yathreb Dellai | Portfolio Business Computing">
 <meta name="twitter:description" content="Développement web, SQL, analyse de données et projets informatiques — ESSECT Tunis.">
 <script type="application/ld+json">
@@ -34,16 +34,7 @@
       "name": "ESSECT Tunis"
     },
     "knowsAbout": [
-      "Business Computing",
-      "Développement web",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "SQL",
-      "Java",
-      "Analyse de données",
-      "Power BI",
-      "Automatisation n8n"
+      "Business Computing", "Développement web", "HTML", "CSS", "JavaScript", "SQL", "Java", "Analyse de données", "Power BI", "Automatisation n8n"
     ],
     "email": "mailto:yathrebdellai6@gmail.com",
     "telephone": "+21695084086",
@@ -469,7 +460,7 @@ html[data-theme="dark"] #themeBtn .moon{display:none}
 .card:hover::before{opacity:1}
 
 /* ============================================================
-   COMPÉTENCES — 4 colonnes
+   COMPÉTENCES
    ============================================================ */
 #skills .grid{
   display:grid;
@@ -590,7 +581,6 @@ html[data-theme="dark"] .tag-pill{color:#d8b4fe}
   pointer-events:none;
 }
 
-/* Image */
 .gal-img{
   position:absolute;inset:0;
   width:100%;height:100%;
@@ -601,7 +591,6 @@ html[data-theme="dark"] .tag-pill{color:#d8b4fe}
 .gal-item:hover .gal-img{transform:scale(1.06)}
 .gal-item.no-img .gal-img{display:none}
 
-/* Emoji fallback (uniquement si l'image ne charge pas) */
 .gal-emoji{
   display:none;
   font-size:3rem;
@@ -871,7 +860,6 @@ footer{
 }
 </style>
 </head>
- <script src="js/dawacare.js"></script>
 <body>
 <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
@@ -938,28 +926,28 @@ footer{
           </p>
 
           <div class="hero-btns reveal">
-            <button class="btn btn-primary" id="cvBtn">
-              <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-              <span data-i18n="hero.cv">Télécharger mon CV</span>
-            </button>
+             <a class="btn btn-primary" href="CV_YATHREB_DELLAI.pdf" download="CV_YATHREB_DELLAI.pdf">
+  <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+  <span data-i18n="hero.cv">Télécharger CV</span>
+</a>
             <a href="#contact" class="btn btn-ghost">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
-              <span data-i18n="hero.talk">Me contacter</span>
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span data-i18n="hero.contact">Me contacter</span>
             </a>
           </div>
 
-          <div class="hero-stats reveal">
-            <div>
-              <div class="stat-num">3ᵉ</div>
-              <div class="stat-label" data-i18n="hero.stat1">Année de licence</div>
-            </div>
-            <div>
-              <div class="stat-num">5+</div>
-              <div class="stat-label" data-i18n="hero.stat2">Certifications</div>
-            </div>
+          <div class="hero-stats">
             <div>
               <div class="stat-num">3+</div>
-              <div class="stat-label" data-i18n="hero.stat3">Projets réalisés</div>
+              <div class="stat-label" data-i18n="stats.exp">Années d'études</div>
+            </div>
+            <div>
+              <div class="stat-num">10+</div>
+              <div class="stat-label" data-i18n="stats.proj">Projets Réalisés</div>
+            </div>
+            <div>
+              <div class="stat-num">100%</div>
+              <div class="stat-label" data-i18n="stats.motiv">Motivation</div>
             </div>
           </div>
         </div>
@@ -968,17 +956,13 @@ footer{
           <div class="avatar-wrap">
             <div class="avatar-ring"></div>
             <div class="avatar-inner">
-              <img id="avatarImg"
-                   src="C:\Users\yathr\OneDrive\Desktop\RW\yy.jpg"
-                   alt="Yathreb Dellai"
-                   onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex';">
+              <img src="yy.jpg" alt="Yathreb Dellai - Étudiante en Business Computing à l'ESSECT Tunis" onerror="this.style.display='none';document.getElementById('avatarFallback').style.display='flex'">
               <div id="avatarFallback">YD</div>
             </div>
-
-            <div class="float-chip chip-1">💻 <span data-i18n="chip.web">Web</span></div>
-            <div class="float-chip chip-2">🗄️ <span>SQL</span></div>
-            <div class="float-chip chip-3">☕ <span>Java</span></div>
           </div>
+          <div class="float-chip chip-1">💼 <span data-i18n="chip.1">Stage PFE / Été</span></div>
+          <div class="float-chip chip-2">📊 <span data-i18n="chip.2">Power BI & SQL</span></div>
+          <div class="float-chip chip-3">🌐 <span data-i18n="chip.3">Développement Web</span></div>
         </div>
 
       </div>
@@ -990,42 +974,42 @@ footer{
     <div class="container">
       <div class="sec-head reveal">
         <span class="tag" data-i18n="skills.tag">Expertise</span>
-        <h2 class="sec-title"><span class="grad" data-i18n="skills.title">Mes compétences</span></h2>
-        <p class="sec-sub" data-i18n="skills.sub">Développement, données et programmation au service du business.</p>
+        <h2 class="sec-title" data-i18n="skills.title">Mes <span class="grad">Compétences</span></h2>
+        <p class="sec-sub" data-i18n="skills.sub">Un équilibre entre compétences techniques et vision gestion / business.</p>
       </div>
 
       <div class="grid">
-        <article class="card reveal">
+        <div class="card reveal">
           <div class="skill-icon">💻</div>
-          <h3 class="skill-title" data-i18n="sk1.title">Développement Web</h3>
-          <p class="skill-desc" data-i18n="sk1.desc">HTML, CSS, JavaScript — création d'interfaces modernes, responsives et interactives.</p>
-          <div class="bar-label"><span data-i18n="sk1.bar">Niveau</span><span>88%</span></div>
-          <div class="bar"><span data-fill="88"></span></div>
-        </article>
+          <h3 class="skill-title" data-i18n="sk.web.title">Développement Web</h3>
+          <p class="skill-desc" data-i18n="sk.web.desc">HTML, CSS, JavaScript et intégration responsive.</p>
+          <div class="bar-label"><span data-i18n="sk.web.lvl">Maîtrise</span><span>85%</span></div>
+          <div class="bar"><span style="width:85%"></span></div>
+        </div>
 
-        <article class="card reveal">
+        <div class="card reveal">
           <div class="skill-icon">🗄️</div>
-          <h3 class="skill-title" data-i18n="sk2.title">SQL</h3>
-          <p class="skill-desc" data-i18n="sk2.desc">Conception de bases de données, requêtes complexes, jointures, vues et optimisation.</p>
-          <div class="bar-label"><span data-i18n="sk2.bar">Niveau</span><span>85%</span></div>
-          <div class="bar"><span data-fill="85"></span></div>
-        </article>
+          <h3 class="skill-title" data-i18n="sk.db.title">Bases de Données & SQL</h3>
+          <p class="skill-desc" data-i18n="sk.db.desc">Modélisation, requêtes SQL, SGBD et gestion de données.</p>
+          <div class="bar-label"><span data-i18n="sk.db.lvl">Maîtrise</span><span>90%</span></div>
+          <div class="bar"><span style="width:90%"></span></div>
+        </div>
 
-        <article class="card reveal">
+        <div class="card reveal">
           <div class="skill-icon">📊</div>
-          <h3 class="skill-title" data-i18n="sk3.title">Analyse des données</h3>
-          <p class="skill-desc" data-i18n="sk3.desc">Nettoyage, visualisation et interprétation de données avec Excel, Power BI et Python.</p>
-          <div class="bar-label"><span data-i18n="sk3.bar">Niveau</span><span>90%</span></div>
-          <div class="bar"><span data-fill="90"></span></div>
-        </article>
+          <h3 class="skill-title" data-i18n="sk.data.title">Analyse & Power BI</h3>
+          <p class="skill-desc" data-i18n="sk.data.desc">Visualisation de données et Business Intelligence.</p>
+          <div class="bar-label"><span data-i18n="sk.data.lvl">Maîtrise</span><span>80%</span></div>
+          <div class="bar"><span style="width:80%"></span></div>
+        </div>
 
-        <article class="card reveal">
-          <div class="skill-icon">☕</div>
-          <h3 class="skill-title" data-i18n="sk4.title">Java</h3>
-          <p class="skill-desc" data-i18n="sk4.desc">Programmation orientée objet, structures de données et applications console/desktop.</p>
-          <div class="bar-label"><span data-i18n="sk4.bar">Niveau</span><span>82%</span></div>
-          <div class="bar"><span data-fill="82"></span></div>
-        </article>
+        <div class="card reveal">
+          <div class="skill-icon">⚙️</div>
+          <h3 class="skill-title" data-i18n="sk.auto.title">Automatisation & Java</h3>
+          <p class="skill-desc" data-i18n="sk.auto.desc">Programmation orientée objet Java et workflows n8n.</p>
+          <div class="bar-label"><span data-i18n="sk.auto.lvl">Maîtrise</span><span>75%</span></div>
+          <div class="bar"><span style="width:75%"></span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -1034,41 +1018,44 @@ footer{
   <section id="projects">
     <div class="container">
       <div class="sec-head reveal">
-        <span class="tag" data-i18n="projects.tag">Réalisations</span>
-        <h2 class="sec-title"><span class="grad" data-i18n="projects.title">Mes projets</span></h2>
-        <p class="sec-sub" data-i18n="projects.sub">Des projets concrets mêlant données et automatisation.</p>
+        <span class="tag" data-i18n="proj.tag">Portfolio</span>
+        <h2 class="sec-title" data-i18n="proj.title">Projets <span class="grad">Académiques</span></h2>
+        <p class="sec-sub" data-i18n="proj.sub">Quelques réalisations illustrant mon parcours en Business Computing.</p>
       </div>
 
       <div class="grid">
-        <article class="card reveal">
-          <div class="proj-top p1-bg">📊</div>
-          <h3 class="proj-title" data-i18n="p1.title">Analyse des données</h3>
-          <p class="proj-desc" data-i18n="p1.desc">Collecte, nettoyage et analyse d'un jeu de données pour en extraire des tendances clés, avec visualisations et interprétation.</p>
+        <div class="card reveal">
+          <div class="proj-top p1-bg">🌐</div>
+          <h3 class="proj-title" data-i18n="p1.title">Plateforme Web Étudiante</h3>
+          <p class="proj-desc" data-i18n="p1.desc">Développement d'un site web interactif avec HTML, CSS et JavaScript pour la gestion d'activités académiques.</p>
           <div class="tags">
-            <span class="tag-pill" data-i18n="p1.t1">Data</span>
-            <span class="tag-pill" data-i18n="p1.t2">Excel</span>
+            <span class="tag-pill">HTML/CSS</span>
+            <span class="tag-pill">JavaScript</span>
+            <span class="tag-pill">UI/UX</span>
           </div>
-        </article>
+        </div>
 
-        <article class="card reveal">
-          <div class="proj-top p2-bg">🔗</div>
-          <h3 class="proj-title" data-i18n="p2.title">Automatisation n8n</h3>
-          <p class="proj-desc" data-i18n="p2.desc">Création de workflows automatisés pour la collecte, le traitement et l'envoi de données entre plusieurs applications.</p>
+        <div class="card reveal">
+          <div class="proj-top p2-bg">📊</div>
+          <h3 class="proj-title" data-i18n="p2.title">Tableau de Bord Power BI</h3>
+          <p class="proj-desc" data-i18n="p2.desc">Conception de dashboards décisionnels pour l'analyse de performances d'entreprise et aide à la décision.</p>
           <div class="tags">
-            <span class="tag-pill" data-i18n="p2.t1">Automatisation</span>
-            <span class="tag-pill" data-i18n="p2.t2">n8n</span>
+            <span class="tag-pill">Power BI</span>
+            <span class="tag-pill">Data Analysis</span>
+            <span class="tag-pill">DAX</span>
           </div>
-        </article>
+        </div>
 
-        <article class="card reveal">
-          <div class="proj-top p3-bg">📈</div>
-          <h3 class="proj-title" data-i18n="p3.title">Dashboard Power BI</h3>
-          <p class="proj-desc" data-i18n="p3.desc">Conception de tableaux de bord interactifs pour visualiser les indicateurs clés et faciliter la prise de décision.</p>
+        <div class="card reveal">
+          <div class="proj-top p3-bg">🗄️</div>
+          <h3 class="proj-title" data-i18n="p3.title">Application & Base de Données SQL</h3>
+          <p class="proj-desc" data-i18n="p3.desc">Modélisation conceptuelle et relationnelle d'une base de données de gestion de stock avec requêtes SQL avancées.</p>
           <div class="tags">
-            <span class="tag-pill" data-i18n="p3.t1">Data Viz</span>
-            <span class="tag-pill" data-i18n="p3.t2">Power BI</span>
+            <span class="tag-pill">SQL</span>
+            <span class="tag-pill">Java</span>
+            <span class="tag-pill">Modélisation</span>
           </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -1077,960 +1064,398 @@ footer{
   <section id="certs">
     <div class="container">
       <div class="sec-head reveal">
-        <span class="tag" data-i18n="certs.tag">Parcours</span>
-        <h2 class="sec-title"><span class="grad" data-i18n="certs.title">Certifications</span></h2>
-        <p class="sec-sub" data-i18n="certs.sub">Formations et certifications obtenues.</p>
+        <span class="tag" data-i18n="cert.tag">Formations</span>
+        <h2 class="sec-title" data-i18n="cert.title">Mes <span class="grad">Certifications</span></h2>
+        <p class="sec-sub" data-i18n="cert.sub">Apprentissage continu et approfondissement des compétences techniques.</p>
       </div>
 
       <div class="grid">
-        <article class="card cert reveal">
+        <div class="card cert reveal">
           <div class="cert-icon">🎓</div>
-          <h3 class="cert-title" data-i18n="c1.title">Licence Business computing</h3>
-          <p class="cert-desc" data-i18n="c1.desc">Licence en Business Computing — ESSECT Tunis</p>
-        </article>
+          <h3 class="cert-title" data-i18n="c1.title">Business Computing Essentials</h3>
+          <p class="cert-desc" data-i18n="c1.desc">ESSECT Tunis — Formations et ateliers pratiques en informatique de gestion.</p>
+        </div>
 
-        <article class="card cert reveal">
-          <div class="cert-icon">📗</div>
-          <h3 class="cert-title" data-i18n="c2.title">Excel Expert</h3>
-          <p class="cert-desc" data-i18n="c2.desc">Maîtrise avancée d'Excel : formules, TCD, Power Query</p>
-        </article>
+        <div class="card cert reveal">
+          <div class="cert-icon">💻</div>
+          <h3 class="cert-title" data-i18n="c2.title">Développement Web & Bases</h3>
+          <p class="cert-desc" data-i18n="c2.desc">Certificats de compétences en programmation web et structures de données.</p>
+        </div>
 
-        <article class="card cert reveal">
-          <div class="cert-icon">🤖</div>
-          <h3 class="cert-title" data-i18n="c3.title">Automation n8n</h3>
-          <p class="cert-desc" data-i18n="c3.desc">Automatisation de workflows et intégration d'API</p>
-        </article>
-
-        <article class="card cert reveal">
-          <div class="cert-icon">🧠</div>
-          <h3 class="cert-title" data-i18n="c4.title">Intelligence Artificielle</h3>
-          <p class="cert-desc" data-i18n="c4.desc">Fondamentaux de l'IA et du machine learning</p>
-        </article>
-
-        <article class="card cert reveal">
+        <div class="card cert reveal">
           <div class="cert-icon">📊</div>
-          <h3 class="cert-title" data-i18n="c5.title">Power BI</h3>
-          <p class="cert-desc" data-i18n="c5.desc">Modélisation de données et création de dashboards</p>
-        </article>
+          <h3 class="cert-title" data-i18n="c3.title">Analyse de Données & BI</h3>
+          <p class="cert-desc" data-i18n="c3.desc">Initiation aux outils de Business Intelligence et Power BI.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ======================= GALERIE ======================= -->
-  <section id="gallery">
+  <section id="gallery" aria-labelledby="gallery-heading">
     <div class="container">
       <div class="sec-head reveal">
-        <span class="tag" data-i18n="gallery.tag">Moments</span>
-        <h2 class="sec-title"><span class="grad" data-i18n="gallery.title">Galerie</span></h2>
-        <p class="sec-sub" data-i18n="gallery.sub">Quelques instants de mon parcours.</p>
+        <span class="tag">Galerie & Réalisations</span>
+        <h2 id="gallery-heading" class="sec-title">Projets & <span class="grad">Vie Académique</span></h2>
+        <p class="sec-sub">Aperçu de mon parcours en Business Computing à l'ESSECT Tunis</p>
       </div>
 
-      <div class="grid" id="galleryGrid">
+      <div class="grid">
+        <article class="gal-item reveal" style="background:linear-gradient(135deg,#c084fc,#8b5cf6)" data-emoji="📊" data-bg="linear-gradient(135deg,#c084fc,#8b5cf6)" tabindex="0" role="button" aria-label="Travail d'équipe en Business Computing à l'ESSECT Tunis">
+          <img class="gal-img" src="p1.jpg" alt="Yathreb Dellai en travail d'équipe et gestion de projet informatique à l'ESSECT Tunis" title="Travail d'équipe et collaboration académique - Yathreb Dellai" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')">
+          <span class="gal-emoji" aria-hidden="true">📊</span>
+          <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+          <span class="gal-label" data-i18n="g1">Travail d'équipe & Projets</span>
+        </article>
 
-        <!-- Photo 1 -->
-        <div class="gal-item reveal"
-             style="background:linear-gradient(135deg,#c084fc,#8b5cf6)"
-             data-emoji="📊" data-bg="linear-gradient(135deg,#c084fc,#8b5cf6)"
-             tabindex="0" role="button" aria-label="Travail d'équipe">
-          <img class="gal-img"
-               src="file:///C:/Users/yathr/OneDrive/Desktop/RW/p1.jpg"
-               alt="Travail d'équipe"
-               loading="lazy"
-               onerror="this.parentElement.classList.add('no-img')">
-          <span class="gal-emoji">📊</span>
-          <span class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
-          <span class="gal-label" data-i18n="g1">Travail d'équipe</span>
-        </div>
+        <article class="gal-item reveal" style="background:linear-gradient(135deg,#f472b6,#c084fc)" data-emoji="💻" data-bg="linear-gradient(135deg,#f472b6,#c084fc)" tabindex="0" role="button" aria-label="Session d'analyse de données et tableaux de bord Power BI">
+          <img class="gal-img" src="p2.jpg" alt="Analyse de données, Power BI et Business Intelligence par Yathreb Dellai" title="Analyse de données et Business Intelligence" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')">
+          <span class="gal-emoji" aria-hidden="true">💻</span>
+          <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+          <span class="gal-label" data-i18n="g2">Analyse de données & BI</span>
+        </article>
 
-        <!-- Photo 2 -->
-        <div class="gal-item reveal"
-             style="background:linear-gradient(135deg,#f472b6,#c084fc)"
-             data-emoji="💻" data-bg="linear-gradient(135deg,#f472b6,#c084fc)"
-             tabindex="0" role="button" aria-label="Analyse de données">
-          <img class="gal-img"
-               src="file:///C:/Users/yathr/OneDrive/Desktop/RW/p2.jpg"
-               alt="Analyse de données"
-               loading="lazy"
-               onerror="this.parentElement.classList.add('no-img')">
-          <span class="gal-emoji">💻</span>
-          <span class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
-          <span class="gal-label" data-i18n="g2">Analyse de données</span>
-        </div>
+        <article class="gal-item reveal" style="background:linear-gradient(135deg,#8b5cf6,#f472b6)" data-emoji="🗄️" data-bg="linear-gradient(135deg,#8b5cf6,#f472b6)" tabindex="0" role="button" aria-label="Conception et gestion de bases de données SQL">
+          <img class="gal-img" src="p3.jpg" alt="Modélisation et requêtes de bases de données SQL - Projet Business Computing" title="Gestion et optimisation de bases de données SQL" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')">
+          <span class="gal-emoji" aria-hidden="true">🗄️</span>
+          <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+          <span class="gal-label" data-i18n="g3">Bases de données SQL</span>
+        </article>
 
-        <!-- Photo 3 -->
-        <div class="gal-item reveal"
-             style="background:linear-gradient(135deg,#8b5cf6,#f472b6)"
-             data-emoji="🗄️" data-bg="linear-gradient(135deg,#8b5cf6,#f472b6)"
-             tabindex="0" role="button" aria-label="">
-          <img class="gal-img"
-               src="file:///C:/Users/yathr/OneDrive/Desktop/RW/p3.jpg"
-               alt=""
-               loading="lazy"
-               onerror="this.parentElement.classList.add('no-img')">
-          <span class="gal-emoji">🗄️</span>
-          <span class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
-          <span class="gal-label" data-i18n="g3"></span>
-        </div>
-
-        <!-- Photo 4 -->
-        <div class="gal-item reveal"
-             style="background:linear-gradient(135deg,#c084fc,#f472b6)"
-             data-emoji="☕" data-bg="linear-gradient(135deg,#c084fc,#f472b6)"
-             tabindex="0" role="button" aria-label="Programmation Java">
-          <img class="gal-img"
-               src="file:///C:/Users/yathr/OneDrive/Desktop/RW/p4.jpg"
-               alt="Programmation Java"
-               loading="lazy"
-               onerror="this.parentElement.classList.add('no-img')">
-          <span class="gal-emoji">☕</span>
-          <span class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+        <article class="gal-item reveal" style="background:linear-gradient(135deg,#c084fc,#f472b6)" data-emoji="☕" data-bg="linear-gradient(135deg,#c084fc,#f472b6)" tabindex="0" role="button" aria-label="Développement d'applications en Java et Programmation">
+          <img class="gal-img" src="p4.jpg" alt="Projet de programmation Java et développement orienté objet par Yathreb Dellai" title="Développement d'applications Java" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')">
+          <span class="gal-emoji" aria-hidden="true">☕</span>
+          <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
           <span class="gal-label" data-i18n="g4">Programmation Java</span>
-        </div>
+        </article>
 
-        <!-- Photo 5 -->
-        <div class="gal-item reveal"
-             style="background:linear-gradient(135deg,#f472b6,#a855f7)"
-             data-emoji="🤝" data-bg="linear-gradient(135deg,#f472b6,#a855f7)"
-             tabindex="0" role="button" aria-label="Travail ">
-          <img class="gal-img"
-               src="file:///C:/Users/yathr/OneDrive/Desktop/RW/p5.jpg"
-               alt="Travail"
-               loading="lazy"
-               onerror="this.parentElement.classList.add('no-img')">
-          <span class="gal-emoji">🤝</span>
-          <span class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
-          <span class="gal-label" data-i18n="g5">Travail </span>
-        </div>
+        <article class="gal-item reveal" style="background:linear-gradient(135deg,#f472b6,#a855f7)" data-emoji="🤝" data-bg="linear-gradient(135deg,#f472b6,#a855f7)" tabindex="0" role="button" aria-label="Travail collaboratif et automatisation de workflows avec n8n">
+          <img class="gal-img" src="p5.jpg" alt="Travail collaboratif sur des projets d'automatisation n8n et solutions Web à Tunis" title="Collaboration et automatisation de processus" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')">
+          <span class="gal-emoji" aria-hidden="true">🤝</span>
+          <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+          <span class="gal-label" data-i18n="g5">Travail collaboratif & Workflow</span>
+        </article>
 
-        <!-- Photo 6 -->
-        <div class="gal-item reveal"
-             style="background:linear-gradient(135deg,#a855f7,#f472b6)"
-             data-emoji="🎓" data-bg="linear-gradient(135deg,#a855f7,#f472b6)"
-             tabindex="0" role="button" aria-label="Vie de campus">
-          <img class="gal-img"
-               src="file:///C:/Users/yathr/OneDrive/Desktop/RW/p6.jpg"
-               alt="Vie de campus"
-               loading="lazy"
-               onerror="this.parentElement.classList.add('no-img')">
-          <span class="gal-emoji">🎓</span>
-          <span class="gal-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
-          <span class="gal-label" data-i18n="g6">Vie de campus</span>
-        </div>
+        <article class="gal-item reveal" style="background:linear-gradient(135deg,#a855f7,#f472b6)" data-emoji="🎓" data-bg="linear-gradient(135deg,#a855f7,#f472b6)" tabindex="0" role="button" aria-label="Vie universitaire et académique à l'ESSECT Tunis">
+          <img class="gal-img" src="p6.jpg" alt="Yathreb Dellai - Étudiante en 3ème année Licence Business Computing à l'ESSECT Tunis" title="Parcours universitaire à l'ESSECT Tunis" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')">
+          <span class="gal-emoji" aria-hidden="true">🎓</span>
+          <span class="gal-zoom" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+          <span class="gal-label" data-i18n="g6">Vie de campus (ESSECT Tunis)</span>
+        </article>
 
       </div>
     </div>
   </section>
+
+  <!-- ======================= LIGHTBOX ======================= -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Agrandissement image">
+    <div class="lb-box">
+      <button class="lb-close" aria-label="Fermer">
+        <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <img class="lb-img" src="" alt="">
+      <div class="lb-emoji"></div>
+      <div class="lb-caption"></div>
+    </div>
+  </div>
 
   <!-- ======================= CONTACT ======================= -->
   <section id="contact">
     <div class="container">
       <div class="sec-head reveal">
         <span class="tag" data-i18n="contact.tag">Contact</span>
-        <h2 class="sec-title"><span class="grad" data-i18n="contact.title">Travaillons ensemble</span></h2>
-        <p class="sec-sub" data-i18n="contact.sub">Une question, une opportunité ? Écrivez-moi.</p>
+        <h2 class="sec-title" data-i18n="contact.title">Restons en <span class="grad">Contact</span></h2>
+        <p class="sec-sub" data-i18n="contact.sub">À la recherche d'un stage ou d'une opportunité collaborative ? Écrivez-moi !</p>
       </div>
 
       <div class="grid">
         <div class="reveal">
-          <a class="info-item" href="mailto:yathrebdellai6@gmail.com">
-            <span class="info-icon">✉️</span>
-            <span>
-              <span class="info-label" data-i18n="contact.emailLabel">E-mail</span>
-              <span class="info-value">yathrebdellai6@gmail.com</span>
-            </span>
-          </a>
-
-          <a class="info-item" href="tel:+21695084086">
-            <span class="info-icon">📞</span>
-            <span>
-              <span class="info-label" data-i18n="contact.phoneLabel">Téléphone</span>
-              <span class="info-value">+216 95 084 086</span>
-            </span>
-          </a>
-
           <div class="info-item">
-            <span class="info-icon">📍</span>
-            <span>
-              <span class="info-label" data-i18n="contact.locLabel">Localisation</span>
-              <span class="info-value" data-i18n="contact.loc">Tunis, Tunisie</span>
-            </span>
+            <div class="info-icon">✉️</div>
+            <div>
+              <div class="info-label" data-i18n="info.email">Email</div>
+              <div class="info-value"><a href="mailto:yathrebdellai6@gmail.com">yathrebdellai6@gmail.com</a></div>
+            </div>
           </div>
 
           <div class="info-item">
-            <span class="info-icon">🏛️</span>
-            <span>
-              <span class="info-label" data-i18n="contact.schoolLabel">Établissement</span>
-              <span class="info-value">ESSECT Tunis</span>
-            </span>
+            <div class="info-icon">📞</div>
+            <div>
+              <div class="info-label" data-i18n="info.phone">Téléphone</div>
+              <div class="info-value"><a href="tel:+21695084086">+216 95 084 086</a></div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-label" data-i18n="info.loc">Localisation</div>
+              <div class="info-value" data-i18n="info.city">Tunis, Tunisie</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">🏛️</div>
+            <div>
+              <div class="info-label" data-i18n="info.uni">Université</div>
+              <div class="info-value">ESSECT Tunis</div>
+            </div>
           </div>
         </div>
 
-        <form id="contactForm" class="card reveal" novalidate>
-          <div class="field">
-            <label for="cName" data-i18n="contact.name">Nom complet</label>
-            <input type="text" id="cName" required data-i18n-ph="contact.namePh" placeholder="Votre nom">
-          </div>
-
-          <div class="field">
-            <label for="cEmail" data-i18n="contact.email">Adresse e-mail</label>
-            <input type="email" id="cEmail" required data-i18n-ph="contact.emailPh" placeholder="vous@exemple.com">
-          </div>
-
-          <div class="field">
-            <label for="cSubject" data-i18n="contact.subject">Sujet</label>
-            <input type="text" id="cSubject" data-i18n-ph="contact.subjectPh" placeholder="Sujet du message">
-          </div>
-
-          <div class="field">
-            <label for="cMessage" data-i18n="contact.message">Votre message</label>
-            <textarea id="cMessage" required data-i18n-ph="contact.messagePh" placeholder="Écrivez votre message…"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="width:100%">
-            <svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            <span data-i18n="contact.send">Envoyer le message</span>
-          </button>
-
-          <div class="form-msg" id="formMsg" data-i18n="contact.sent">Merci ! Votre message a bien été envoyé.</div>
-        </form>
+        <div class="card reveal">
+          <form id="contactForm">
+            <div class="field">
+              <label for="name" data-i18n="form.name">Votre Nom</label>
+              <input type="text" id="name" required placeholder="Ex. Mohamed Ben Ali">
+            </div>
+            <div class="field">
+              <label for="email" data-i18n="form.email">Votre Email</label>
+              <input type="email" id="email" required placeholder="nom@exemple.com">
+            </div>
+            <div class="field">
+              <label for="message" data-i18n="form.msg">Votre Message</label>
+              <textarea id="message" required placeholder="Bonjour Yathreb, je vous contacte pour..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <span data-i18n="form.send">Envoyer le message</span>
+            </button>
+            <div class="form-msg" id="formMsg" data-i18n="form.success">Message envoyé avec succès !</div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   </main>
+
   <!-- ======================= FOOTER ======================= -->
   <footer>
     <div class="container">
       <div class="footer-logo">Yathreb Dellai</div>
-      <p class="footer-role" data-i18n="footer.role">Étudiante en Business Computing · ESSECT Tunis</p>
-
+      <div class="footer-role" data-i18n="footer.role">Étudiante en Business Computing à l’ESSECT Tunis</div>
       <div class="footer-social">
-        <a href="mailto:yathrebdellai6@gmail.com" aria-label="Email">✉️</a>
-        <a href="tel:+21695084086" aria-label="Téléphone">📞</a>
-        <a href="#home" aria-label="Haut de page">↑</a>
+        <a href="https://github.com/yathrebdellai6-prog" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:yathrebdellai6@gmail.com" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
       </div>
-
-      <p class="footer-rights" data-i18n="footer.rights">© 2026 Yathreb Dellai — ESSECT Tunis. Tous droits réservés.</p>
+      <div class="footer-rights">© 2026 Yathreb Dellai. Tous droits réservés.</div>
     </div>
   </footer>
 
 </div>
 
-<!-- ======================= LIGHTBOX ======================= -->
-<div id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-  <div class="lb-box" id="lbBox">
-    <button class="lb-close" id="lbClose" aria-label="Fermer">
-      <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
-    <img class="lb-img" id="lbImg" alt="">
-    <span class="lb-emoji" id="lbEmoji">📊</span>
-    <span class="lb-caption" id="lbCaption"></span>
-  </div>
-</div>
-
+<!-- ============================================================
+     SCRIPT PORTFOLIO (theme, menu, lightbox, form, reveal)
+     ============================================================ -->
 <script>
-(function(){
-'use strict';
-
-/* ============================================================
-   1. TRADUCTIONS
-   ============================================================ */
-var I18N = {
-  fr:{
-    "nav.home":"Accueil","nav.skills":"Compétences","nav.projects":"Projets",
-    "nav.certs":"Certifications","nav.gallery":"Galerie","nav.contact":"Contact",
-
-    "hero.badge":"Disponible pour un stage",
-    "hero.greet":"Bonjour, je suis",
-    "hero.role":"Étudiante en Business Computing",
-    "hero.sub":"Licence Business Computing · 3ᵉ année · ESSECT Tunis",
-    "hero.desc":"Passionnée par le développement web, les bases de données et l'analyse de données. Je construis des solutions concrètes à l'intersection du code et du business.",
-    "hero.cv":"Télécharger mon CV",
-    "hero.talk":"Me contacter",
-    "hero.stat1":"Année de licence","hero.stat2":"Certifications","hero.stat3":"Projets réalisés",
-    "chip.web":"Web",
-
-    "skills.tag":"Expertise","skills.title":"Mes compétences",
-    "skills.sub":"Développement, données et programmation au service du business.",
-    "sk1.title":"Développement Web",
-    "sk1.desc":"HTML, CSS, JavaScript — création d'interfaces modernes, responsives et interactives.",
-    "sk1.bar":"Niveau",
-    "sk2.title":"SQL",
-    "sk2.desc":"Conception de bases de données, requêtes complexes, jointures, vues et optimisation.",
-    "sk2.bar":"Niveau",
-    "sk3.title":"Analyse des données",
-    "sk3.desc":"Nettoyage, visualisation et interprétation de données avec Excel, Power BI et Python.",
-    "sk3.bar":"Niveau",
-    "sk4.title":"Java",
-    "sk4.desc":"Programmation orientée objet, structures de données et applications console/desktop.",
-    "sk4.bar":"Niveau",
-
-    "projects.tag":"Réalisations","projects.title":"Mes projets",
-    "projects.sub":"Des projets concrets mêlant données et automatisation.",
-    "p1.title":"Analyse des données",
-    "p1.desc":"Collecte, nettoyage et analyse d'un jeu de données pour en extraire des tendances clés, avec visualisations et interprétation.",
-    "p1.t1":"Data","p1.t2":"Excel",
-    "p2.title":"Automatisation n8n",
-    "p2.desc":"Création de workflows automatisés pour la collecte, le traitement et l'envoi de données entre plusieurs applications.",
-    "p2.t1":"Automatisation","p2.t2":"n8n",
-    "p3.title":"Dashboard Power BI",
-    "p3.desc":"Conception de tableaux de bord interactifs pour visualiser les indicateurs clés et faciliter la prise de décision.",
-    "p3.t1":"Data Viz","p3.t2":"Power BI",
-
-    "certs.tag":"Parcours","certs.title":"Certifications",
-    "certs.sub":"Formations et certifications obtenues.",
-    "c1.title":"Licence Business computing","c1.desc":"Licence en Business Computing — ESSECT Tunis",
-    "c2.title":"Excel Expert","c2.desc":"Maîtrise avancée d'Excel : formules, TCD, Power Query",
-    "c3.title":"Automation n8n","c3.desc":"Automatisation de workflows et intégration d'API",
-    "c4.title":"Intelligence Artificielle","c4.desc":"Fondamentaux de l'IA et du machine learning",
-    "c5.title":"Power BI","c5.desc":"Modélisation de données et création de dashboards",
-
-    "gallery.tag":"Moments","gallery.title":"Galerie",
-    "gallery.sub":"Quelques instants de mon parcours.",
-    "g1":"Analyse de données","g2":"Développement web","g3":"Bases de données SQL",
-    "g4":"Programmation Java","g5":"Travail d'équipe","g6":"Vie de campus",
-
-    "contact.tag":"Contact","contact.title":"Travaillons ensemble",
-    "contact.sub":"Une question, une opportunité ? Écrivez-moi.",
-    "contact.name":"Nom complet","contact.namePh":"Votre nom",
-    "contact.email":"Adresse e-mail","contact.emailPh":"vous@exemple.com",
-    "contact.subject":"Sujet","contact.subjectPh":"Sujet du message",
-    "contact.message":"Votre message","contact.messagePh":"Écrivez votre message…",
-    "contact.send":"Envoyer le message",
-    "contact.emailLabel":"E-mail","contact.phoneLabel":"Téléphone",
-    "contact.locLabel":"Localisation","contact.loc":"Tunis, Tunisie",
-    "contact.schoolLabel":"Établissement",
-    "contact.sent":"Merci ! Votre message a bien été envoyé.",
-
-    "footer.role":"Étudiante en Business Computing · ESSECT Tunis",
-    "footer.rights":"© 2026 Yathreb Dellai — ESSECT Tunis. Tous droits réservés.",
-
-    "cv.title":"YATHREB DELLAI",
-    "cv.sub":"Étudiante en Business Computing — ESSECT Tunis",
-    "cv.profile":"PROFIL",
-    "cv.profileText":"Étudiante en 3ᵉ année de Licence Business Computing à l'ESSECT Tunis. Passionnée par le développement web, les bases de données et l'analyse de données.",
-    "cv.skills":"COMPÉTENCES",
-    "cv.projects":"PROJETS",
-    "cv.certs":"CERTIFICATIONS",
-    "cv.contact":"CONTACT",
-    "cv.generated":"Généré le",
-    "cv.error":"Veuillez remplir tous les champs obligatoires."
-  },
-
-  en:{
-    "nav.home":"Home","nav.skills":"Skills","nav.projects":"Projects",
-    "nav.certs":"Certifications","nav.gallery":"Gallery","nav.contact":"Contact",
-
-    "hero.badge":"Available for an internship",
-    "hero.greet":"Hello, I'm",
-    "hero.role":"Business Computing Student",
-    "hero.sub":"Bachelor in Business Computing · 3rd year · ESSECT Tunis",
-    "hero.desc":"Passionate about web development, databases and data analysis. I build concrete solutions at the intersection of code and business.",
-    "hero.cv":"Download my CV",
-    "hero.talk":"Get in touch",
-    "hero.stat1":"Year of study","hero.stat2":"Certifications","hero.stat3":"Projects completed",
-    "chip.web":"Web",
-
-    "skills.tag":"Expertise","skills.title":"My skills",
-    "skills.sub":"Development, data and programming for business.",
-    "sk1.title":"Web Development",
-    "sk1.desc":"HTML, CSS, JavaScript — building modern, responsive and interactive interfaces.",
-    "sk1.bar":"Level",
-    "sk2.title":"SQL",
-    "sk2.desc":"Database design, complex queries, joins, views and optimisation.",
-    "sk2.bar":"Level",
-    "sk3.title":"Data Analysis",
-    "sk3.desc":"Cleaning, visualising and interpreting data with Excel, Power BI and Python.",
-    "sk3.bar":"Level",
-    "sk4.title":"Java",
-    "sk4.desc":"Object-oriented programming, data structures and console/desktop applications.",
-    "sk4.bar":"Level",
-
-    "projects.tag":"Work","projects.title":"My projects",
-    "projects.sub":"Hands-on projects combining data and automation.",
-    "p1.title":"Data Analysis",
-    "p1.desc":"Collecting, cleaning and analysing a dataset to extract key trends, with visualisations and interpretation.",
-    "p1.t1":"Data","p1.t2":"Excel",
-    "p2.title":"n8n Automation",
-    "p2.desc":"Building automated workflows to collect, process and send data across multiple applications.",
-    "p2.t1":"Automation","p2.t2":"n8n",
-    "p3.title":"Power BI Dashboard",
-    "p3.desc":"Designing interactive dashboards to visualise key indicators and support decision-making.",
-    "p3.t1":"Data Viz","p3.t2":"Power BI",
-
-    "certs.tag":"Journey","certs.title":"Certifications",
-    "certs.sub":"Trainings and certifications earned.",
-    "c1.title":"Business Computing Bachelor","c1.desc":"Bachelor in Business Computing — ESSECT Tunis",
-    "c2.title":"Excel Expert","c2.desc":"Advanced Excel: formulas, pivot tables, Power Query",
-    "c3.title":"n8n Automation","c3.desc":"Workflow automation and API integration",
-    "c4.title":"Artificial Intelligence","c4.desc":"Fundamentals of AI and machine learning",
-    "c5.title":"Power BI","c5.desc":"Data modelling and dashboard creation",
-
-    "gallery.tag":"Moments","gallery.title":"Gallery",
-    "gallery.sub":"A few moments from my journey.",
-    "g1":"Data Analysis","g2":"Web Development","g3":"SQL Databases",
-    "g4":"Java Programming","g5":"Teamwork","g6":"Campus Life",
-
-    "contact.tag":"Contact","contact.title":"Let's work together",
-    "contact.sub":"A question or an opportunity? Write to me.",
-    "contact.name":"Full name","contact.namePh":"Your name",
-    "contact.email":"Email address","contact.emailPh":"you@example.com",
-    "contact.subject":"Subject","contact.subjectPh":"Message subject",
-    "contact.message":"Your message","contact.messagePh":"Write your message…",
-    "contact.send":"Send message",
-    "contact.emailLabel":"Email","contact.phoneLabel":"Phone",
-    "contact.locLabel":"Location","contact.loc":"Tunis, Tunisia",
-    "contact.schoolLabel":"School",
-    "contact.sent":"Thank you! Your message has been sent.",
-
-    "footer.role":"Business Computing Student · ESSECT Tunis",
-    "footer.rights":"© 2026 Yathreb Dellai — ESSECT Tunis. All rights reserved.",
-
-    "cv.title":"YATHREB DELLAI",
-    "cv.sub":"Business Computing Student — ESSECT Tunis",
-    "cv.profile":"PROFILE",
-    "cv.profileText":"Third-year Business Computing student at ESSECT Tunis. Passionate about web development, databases and data analysis.",
-    "cv.skills":"SKILLS",
-    "cv.projects":"PROJECTS",
-    "cv.certs":"CERTIFICATIONS",
-    "cv.contact":"CONTACT",
-    "cv.generated":"Generated on",
-    "cv.error":"Please fill in all required fields."
-  },
-
-  ar:{
-    "nav.home":"الرئيسية","nav.skills":"المهارات","nav.projects":"المشاريع",
-    "nav.certs":"الشهادات","nav.gallery":"المعرض","nav.contact":"اتصل بي",
-
-    "hero.badge":"متاحة للتدريب",
-    "hero.greet":"مرحباً، أنا",
-    "hero.role":"طالبة في الإعلامية الإدارية",
-    "hero.sub":"إجازة في الإعلامية الإدارية · السنة الثالثة · ESSECT تونس",
-    "hero.desc":"شغوفة بتطوير الويب وقواعد البيانات وتحليل البيانات. أبني حلولاً ملموسة في تقاطع البرمجة والأعمال.",
-    "hero.cv":"تحميل السيرة الذاتية",
-    "hero.talk":"تواصل معي",
-    "hero.stat1":"سنة الإجازة","hero.stat2":"شهادات","hero.stat3":"مشاريع منجزة",
-    "chip.web":"ويب",
-
-    "skills.tag":"الخبرات","skills.title":"مهاراتي",
-    "skills.sub":"تطوير وبيانات وبرمجة في خدمة الأعمال.",
-    "sk1.title":"تطوير الويب",
-    "sk1.desc":"HTML، CSS، JavaScript — إنشاء واجهات حديثة ومتجاوبة وتفاعلية.",
-    "sk1.bar":"المستوى",
-    "sk2.title":"SQL",
-    "sk2.desc":"تصميم قواعد البيانات، الاستعلامات المعقدة، الربط، العروض والتحسين.",
-    "sk2.bar":"المستوى",
-    "sk3.title":"تحليل البيانات",
-    "sk3.desc":"تنظيف البيانات وتصويرها وتفسيرها باستخدام Excel و Power BI و Python.",
-    "sk3.bar":"المستوى",
-    "sk4.title":"Java",
-    "sk4.desc":"البرمجة الكائنية، هياكل البيانات وتطبيقات سطح المكتب والكونسول.",
-    "sk4.bar":"المستوى",
-
-    "projects.tag":"الإنجازات","projects.title":"مشاريعي",
-    "projects.sub":"مشاريع تجمع بين البيانات والأتمتة.",
-    "p1.title":"تحليل البيانات",
-    "p1.desc":"جمع وتنظيف وتحليل مجموعة بيانات لاستخراج الاتجاهات الأساسية مع التصوير والتفسير.",
-    "p1.t1":"بيانات","p1.t2":"إكسل",
-    "p2.title":"الأتمتة بـ n8n",
-    "p2.desc":"إنشاء مسارات عمل آلية لجمع ومعالجة وإرسال البيانات بين عدة تطبيقات.",
-    "p2.t1":"أتمتة","p2.t2":"n8n",
-    "p3.title":"لوحة قيادة Power BI",
-    "p3.desc":"تصميم لوحات قيادة تفاعلية لعرض المؤشرات الأساسية وتسهيل اتخاذ القرار.",
-    "p3.t1":"تصوير البيانات","p3.t2":"Power BI",
-
-    "certs.tag":"المسار","certs.title":"الشهادات",
-    "certs.sub":"التكوينات والشهادات المتحصّل عليها.",
-    "c1.title":"إجازة الإعلامية الإدارية","c1.desc":"إجازة في الإعلامية الإدارية — ESSECT تونس",
-    "c2.title":"خبير إكسل","c2.desc":"إتقان متقدم لإكسل: المعادلات، الجداول المحورية، Power Query",
-    "c3.title":"أتمتة n8n","c3.desc":"أتمتة مسارات العمل ودمج واجهات API",
-    "c4.title":"الذكاء الاصطناعي","c4.desc":"أساسيات الذكاء الاصطناعي وتعلّم الآلة",
-    "c5.title":"Power BI","c5.desc":"نمذجة البيانات وإنشاء لوحات القيادة",
-
-    "gallery.tag":"لحظات","gallery.title":"المعرض",
-    "gallery.sub":"بعض اللحظات من مسيرتي.",
-    "g1":"تحليل البيانات","g2":"تطوير الويب","g3":"قواعد بيانات SQL",
-    "g4":"برمجة Java","g5":"العمل الجماعي","g6":"الحياة الجامعية",
-
-    "contact.tag":"التواصل","contact.title":"لنعمل معاً",
-    "contact.sub":"سؤال أو فرصة؟ اكتب لي.",
-    "contact.name":"الاسم الكامل","contact.namePh":"اسمك",
-    "contact.email":"البريد الإلكتروني","contact.emailPh":"you@example.com",
-    "contact.subject":"الموضوع","contact.subjectPh":"موضوع الرسالة",
-    "contact.message":"رسالتك","contact.messagePh":"اكتب رسالتك…",
-    "contact.send":"إرسال الرسالة",
-    "contact.emailLabel":"البريد الإلكتروني","contact.phoneLabel":"الهاتف",
-    "contact.locLabel":"الموقع","contact.loc":"تونس، تونس",
-    "contact.schoolLabel":"المؤسسة",
-    "contact.sent":"شكراً! تم إرسال رسالتك بنجاح.",
-
-    "footer.role":"طالبة في الإعلامية الإدارية · ESSECT تونس",
-    "footer.rights":"© 2026 يثرب الدلاي — ESSECT تونس. جميع الحقوق محفوظة.",
-
-    "cv.title":"يثرب الدلاي",
-    "cv.sub":"طالبة في الإعلامية الإدارية — ESSECT تونس",
-    "cv.profile":"الملف الشخصي",
-    "cv.profileText":"طالبة في السنة الثالثة إجازة الإعلامية الإدارية بالمعهد العالي للدراسات التجارية بتونس. شغوفة بتطوير الويب وقواعد البيانات وتحليل البيانات.",
-    "cv.skills":"المهارات",
-    "cv.projects":"المشاريع",
-    "cv.certs":"الشهادات",
-    "cv.contact":"التواصل",
-    "cv.generated":"أُنشئ في",
-    "cv.error":"يرجى ملء جميع الحقول المطلوبة."
-  }
-};
-
-var root = document.documentElement;
-var currentLang = 'fr';
-
-/* ============================================================
-   2. LANGUE
-   ============================================================ */
-function applyLang(lang){
-  if(!I18N[lang]) lang = 'fr';
-  currentLang = lang;
-  var t = I18N[lang];
-
-  root.lang = lang;
-  root.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-
-  document.querySelectorAll('[data-i18n]').forEach(function(el){
-    var k = el.getAttribute('data-i18n');
-    if(t[k] !== undefined) el.textContent = t[k];
-  });
-
-  document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
-    var k = el.getAttribute('data-i18n-ph');
-    if(t[k] !== undefined) el.placeholder = t[k];
-  });
-
-  /* Mettre à jour les alt des images de galerie selon la langue */
-  var galItems = document.querySelectorAll('.gal-item');
-  galItems.forEach(function(item, i){
-    var img = item.querySelector('.gal-img');
-    if(img){
-      var labelEl = item.querySelector('.gal-label');
-      if(labelEl) img.alt = labelEl.textContent;
-    }
-  });
-
-  document.querySelectorAll('.lang-btn').forEach(function(b){
-    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
-  });
-
-  document.title = (lang === 'ar')
-    ? 'يثرب الدلاي — الإعلامية الإدارية · ESSECT'
-    : 'Yathreb Dellai — Business Computing · ESSECT';
-
-  try{ localStorage.setItem('yd-lang', lang); }catch(e){}
-}
-
-document.querySelectorAll('.lang-btn').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    applyLang(btn.getAttribute('data-lang'));
-  });
+// Theme toggle
+const themeBtn = document.getElementById('themeBtn');
+themeBtn.addEventListener('click', () => {
+  const current = document.documentElement.dataset.theme;
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('yd-theme', next);
 });
 
-/* ============================================================
-   3. THÈME
-   ============================================================ */
-var themeBtn = document.getElementById('themeBtn');
-themeBtn.addEventListener('click', function(){
-  root.dataset.theme = (root.dataset.theme === 'dark') ? 'light' : 'dark';
-  try{ localStorage.setItem('yd-theme', root.dataset.theme); }catch(e){}
-});
-
-/* ============================================================
-   4. HEADER + MENU
-   ============================================================ */
-var header = document.getElementById('header');
-var nav = document.getElementById('nav');
-var menuBtn = document.getElementById('menuBtn');
-
-window.addEventListener('scroll', function(){
-  header.classList.toggle('scrolled', window.scrollY > 20);
-}, {passive:true});
-
-menuBtn.addEventListener('click', function(){
+// Mobile Menu
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+menuBtn.addEventListener('click', () => {
   nav.classList.toggle('open');
 });
-nav.querySelectorAll('a').forEach(function(a){
-  a.addEventListener('click', function(){ nav.classList.remove('open'); });
+nav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => nav.classList.remove('open'));
 });
 
-/* ============================================================
-   5. NAV ACTIVE
-   ============================================================ */
-var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
-var navLinks = Array.prototype.slice.call(nav.querySelectorAll('a'));
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lbImg = lightbox.querySelector('.lb-img');
+const lbEmoji = lightbox.querySelector('.lb-emoji');
+const lbCaption = lightbox.querySelector('.lb-caption');
+const lbClose = lightbox.querySelector('.lb-close');
 
-function updateActive(){
-  var pos = window.scrollY + 160;
-  var current = sections[0] ? sections[0].id : '';
-  sections.forEach(function(s){
-    if(s.offsetTop <= pos) current = s.id;
-  });
-  navLinks.forEach(function(a){
-    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-  });
-}
-window.addEventListener('scroll', updateActive, {passive:true});
+document.querySelectorAll('.gal-item').forEach(item => {
+  const img = item.querySelector('.gal-img');
+  const emoji = item.getAttribute('data-emoji');
+  const label = item.querySelector('.gal-label').textContent;
 
-/* ============================================================
-   6. CANVAS PARTICULES
-   ============================================================ */
-var canvas = document.getElementById('bg');
-var ctx = canvas.getContext('2d');
-var W = 0, H = 0, DPR = 1;
-var particles = [];
-var mouse = {x:-9999, y:-9999};
-var running = true;
-
-function initParticles(){
-  var count = Math.floor((window.innerWidth * window.innerHeight) / 16000);
-  count = Math.max(28, Math.min(95, count));
-  particles = [];
-  for(var i = 0; i < count; i++){
-    particles.push({
-      x: Math.random() * W,
-      y: Math.random() * H,
-      vx: (Math.random() - 0.5) * 0.34 * DPR,
-      vy: (Math.random() - 0.5) * 0.34 * DPR,
-      r: (Math.random() * 1.7 + 0.9) * DPR
-    });
-  }
-}
-
-function resizeCanvas(){
-  DPR = Math.min(window.devicePixelRatio || 1, 2);
-  W = canvas.width  = Math.floor(window.innerWidth  * DPR);
-  H = canvas.height = Math.floor(window.innerHeight * DPR);
-  canvas.style.width  = window.innerWidth + 'px';
-  canvas.style.height = window.innerHeight + 'px';
-  initParticles();
-}
-
-function draw(){
-  if(!running) return;
-  ctx.clearRect(0, 0, W, H);
-
-  var dark = root.dataset.theme === 'dark';
-  var col  = dark ? '192,132,252' : '147,51,234';
-  var linkDist  = 132 * DPR;
-  var mouseDist = 170 * DPR;
-  var i, j, p, a, b, dx, dy, d, d2, o;
-
-  for(i = 0; i < particles.length; i++){
-    p = particles[i];
-    p.x += p.vx;
-    p.y += p.vy;
-
-    if(p.x < 0){ p.x = 0; p.vx *= -1; }
-    if(p.x > W){ p.x = W; p.vx *= -1; }
-    if(p.y < 0){ p.y = 0; p.vy *= -1; }
-    if(p.y > H){ p.y = H; p.vy *= -1; }
-
-    dx = p.x - mouse.x;
-    dy = p.y - mouse.y;
-    d = Math.sqrt(dx * dx + dy * dy);
-    if(d < mouseDist && d > 0.5){
-      var f = (1 - d / mouseDist);
-      p.x += (dx / d) * f * 2.6;
-      p.y += (dy / d) * f * 2.6;
-    }
-
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(' + col + ',' + (dark ? 0.75 : 0.5) + ')';
-    ctx.fill();
-  }
-
-  for(i = 0; i < particles.length; i++){
-    a = particles[i];
-    for(j = i + 1; j < particles.length; j++){
-      b = particles[j];
-      dx = a.x - b.x;
-      dy = a.y - b.y;
-      d2 = dx * dx + dy * dy;
-      if(d2 < linkDist * linkDist){
-        o = (1 - Math.sqrt(d2) / linkDist) * (dark ? 0.3 : 0.18);
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.strokeStyle = 'rgba(' + col + ',' + o + ')';
-        ctx.lineWidth = DPR * 0.75;
-        ctx.stroke();
-      }
-    }
-  }
-
-  requestAnimationFrame(draw);
-}
-
-window.addEventListener('resize', function(){
-  clearTimeout(window.__rz);
-  window.__rz = setTimeout(resizeCanvas, 150);
-});
-
-window.addEventListener('mousemove', function(e){
-  mouse.x = e.clientX * DPR;
-  mouse.y = e.clientY * DPR;
-}, {passive:true});
-
-window.addEventListener('mouseleave', function(){
-  mouse.x = -9999; mouse.y = -9999;
-});
-
-window.addEventListener('touchmove', function(e){
-  if(e.touches.length){
-    mouse.x = e.touches[0].clientX * DPR;
-    mouse.y = e.touches[0].clientY * DPR;
-  }
-}, {passive:true});
-
-window.addEventListener('touchend', function(){
-  mouse.x = -9999; mouse.y = -9999;
-});
-
-document.addEventListener('visibilitychange', function(){
-  running = !document.hidden;
-  if(running) requestAnimationFrame(draw);
-});
-
-resizeCanvas();
-requestAnimationFrame(draw);
-
-/* ============================================================
-   7. REVEAL
-   ============================================================ */
-var revealEls = document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        var el = entry.target;
-        var siblings = Array.prototype.slice.call(
-          el.parentElement ? el.parentElement.children : []
-        );
-        var idx = siblings.indexOf(el);
-        el.style.transitionDelay = (Math.min(idx, 6) * 70) + 'ms';
-        el.classList.add('visible');
-        io.unobserve(el);
-      }
-    });
-  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
-  revealEls.forEach(function(el){ io.observe(el); });
-}else{
-  revealEls.forEach(function(el){ el.classList.add('visible'); });
-}
-
-var bars = document.querySelectorAll('.bar span[data-fill]');
-if('IntersectionObserver' in window){
-  var bo = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        var el = entry.target;
-        setTimeout(function(){
-          el.style.width = el.getAttribute('data-fill') + '%';
-        }, 180);
-        bo.unobserve(el);
-      }
-    });
-  }, {threshold:0.4});
-  bars.forEach(function(b){ bo.observe(b); });
-}else{
-  bars.forEach(function(b){ b.style.width = b.getAttribute('data-fill') + '%'; });
-}
-
-/* ============================================================
-   8. LIGHTBOX (avec images + fallback)
-   ============================================================ */
-var lightbox = document.getElementById('lightbox');
-var lbBox    = document.getElementById('lbBox');
-var lbImg    = document.getElementById('lbImg');
-var lbEmoji  = document.getElementById('lbEmoji');
-var lbCaption= document.getElementById('lbCaption');
-var lbClose  = document.getElementById('lbClose');
-
-function openLightbox(item){
-  var img   = item.querySelector('.gal-img');
-  var noImg = item.classList.contains('no-img');
-  var emoji = item.getAttribute('data-emoji') || '🖼️';
-  var bg    = item.getAttribute('data-bg') || 'linear-gradient(135deg,#c084fc,#f472b6)';
-
-  /* Réinitialisation */
-  lbImg.classList.remove('show');
-  lbImg.onerror = null;
-  lbEmoji.style.display = 'block';
-  lbBox.style.background = bg;
-
-  if(img && img.src && !noImg){
-    lbImg.src = img.src;
-    lbImg.alt = img.alt || '';
-    lbImg.classList.add('show');
-    lbEmoji.style.display = 'none';
-    lbBox.style.background = '#0a0a15';
-
-    lbImg.onerror = function(){
+  item.addEventListener('click', () => {
+    if (!item.classList.contains('no-img') && img && img.src) {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbImg.classList.add('show');
+      lbEmoji.style.display = 'none';
+    } else {
       lbImg.classList.remove('show');
       lbEmoji.textContent = emoji;
       lbEmoji.style.display = 'block';
-      lbBox.style.background = bg;
-    };
-  } else {
-    lbEmoji.textContent = emoji;
-  }
-
-  var label = item.querySelector('.gal-label');
-  lbCaption.textContent = label ? label.textContent : '';
-
-  lightbox.classList.add('open');
-  lightbox.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox(){
-  lightbox.classList.remove('open');
-  lightbox.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-  lbImg.classList.remove('show');
-  lbImg.src = '';
-}
-
-document.querySelectorAll('.gal-item').forEach(function(item){
-  item.addEventListener('click', function(){ openLightbox(item); });
-  item.addEventListener('keydown', function(e){
-    if(e.key === 'Enter' || e.key === ' '){
-      e.preventDefault();
-      openLightbox(item);
     }
+    lbCaption.textContent = label;
+    lightbox.classList.add('open');
   });
 });
 
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lbImg.src = '';
+}
 lbClose.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', function(e){
-  if(e.target === lightbox) closeLightbox();
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) closeLightbox();
 });
-document.addEventListener('keydown', function(e){
-  if(e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
-});
-
-/* ============================================================
-   9. CV .txt
-   ============================================================ */
-document.getElementById('cvBtn').addEventListener('click', function(){
-  var t = I18N[currentLang] || I18N.fr;
-  var line = '==================================================';
-
-  var content = [
-    line,
-    '   ' + t['cv.title'],
-    '   ' + t['cv.sub'],
-    line,
-    '',
-    t['cv.contact'].toUpperCase(),
-    '--------------------------------------------------',
-    'Email    : yathrebdellai6@gmail.com',
-    'Phone    : +216 95 084 086',
-    'Location : ' + t['contact.loc'],
-    'School   : ESSECT Tunis',
-    '',
-    t['cv.profile'],
-    '--------------------------------------------------',
-    t['cv.profileText'],
-    '',
-    t['cv.skills'],
-    '--------------------------------------------------',
-    '• ' + t['sk1.title'] + ' — ' + t['sk1.desc'],
-    '• ' + t['sk2.title'] + ' — ' + t['sk2.desc'],
-    '• ' + t['sk3.title'] + ' — ' + t['sk3.desc'],
-    '• ' + t['sk4.title'] + ' — ' + t['sk4.desc'],
-    '',
-    t['cv.projects'],
-    '--------------------------------------------------',
-    '• ' + t['p1.title'] + ' — ' + t['p1.desc'],
-    '• ' + t['p2.title'] + ' — ' + t['p2.desc'],
-    '• ' + t['p3.title'] + ' — ' + t['p3.desc'],
-    '',
-    t['cv.certs'],
-    '--------------------------------------------------',
-    '• ' + t['c1.title'] + ' — ' + t['c1.desc'],
-    '• ' + t['c2.title'] + ' — ' + t['c2.desc'],
-    '• ' + t['c3.title'] + ' — ' + t['c3.desc'],
-    '• ' + t['c4.title'] + ' — ' + t['c4.desc'],
-    '• ' + t['c5.title'] + ' — ' + t['c5.desc'],
-    '',
-    line,
-    t['cv.generated'] + ' ' + new Date().toLocaleDateString(
-      currentLang === 'ar' ? 'ar-TN' : (currentLang === 'en' ? 'en-GB' : 'fr-FR'),
-      {year:'numeric', month:'long', day:'numeric'}
-    ),
-    line
-  ].join('\n');
-
-  var blob = new Blob(['\ufeff' + content], {type:'text/plain;charset=utf-8'});
-  var url = URL.createObjectURL(blob);
-  var a = document.createElement('a');
-  a.href = url;
-  a.download = 'CV_Yathreb_Dellai.txt';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  setTimeout(function(){ URL.revokeObjectURL(url); }, 1200);
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
 });
 
-/* ============================================================
-   10. FORMULAIRE
-   ============================================================ */
-var form = document.getElementById('contactForm');
-var formMsg = document.getElementById('formMsg');
-
-form.addEventListener('submit', function(e){
+// Form submission handler
+const form = document.getElementById('contactForm');
+const formMsg = document.getElementById('formMsg');
+form.addEventListener('submit', e => {
   e.preventDefault();
-
-  var name = document.getElementById('cName').value.trim();
-  var email = document.getElementById('cEmail').value.trim();
-  var message = document.getElementById('cMessage').value.trim();
-  var t = I18N[currentLang] || I18N.fr;
-
-  if(!name || !email || !message){
-    formMsg.textContent = t['cv.error'];
-    formMsg.style.color = '#e11d48';
-    formMsg.style.background = 'rgba(225,29,72,.12)';
-    formMsg.style.borderColor = 'rgba(225,29,72,.3)';
-    formMsg.classList.add('show');
-    return;
-  }
-
-  formMsg.textContent = t['contact.sent'];
-  formMsg.style.color = '#059669';
-  formMsg.style.background = 'rgba(16,185,129,.12)';
-  formMsg.style.borderColor = 'rgba(16,185,129,.3)';
   formMsg.classList.add('show');
-
   form.reset();
-  setTimeout(function(){ formMsg.classList.remove('show'); }, 6000);
+  setTimeout(() => formMsg.classList.remove('show'), 5000);
 });
 
-/* ============================================================
-   11. INIT
-   ============================================================ */
-(function init(){
-  var savedLang = null;
-  try{ savedLang = localStorage.getItem('yd-lang'); }catch(e){}
+// Reveal animation on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
 
-  if(!savedLang){
-    var navLang = (navigator.language || 'fr').toLowerCase();
-    if(navLang.indexOf('ar') === 0) savedLang = 'ar';
-    else if(navLang.indexOf('en') === 0) savedLang = 'en';
-    else savedLang = 'fr';
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+<!-- ============================================================
+     SCRIPT DAWACARE (Inline: 100% garanti sans erreur 404)
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+  var LINKS = { demo: '', code: '' };
+  var SHOTS = ['dashboard', 'medications', 'pillbox', 'assistant'];
+  
+  // L'image se trouve à la racine, donc on laisse IMG_BASE vide.
+  var IMG_BASE = ''; 
+
+  var D = {
+    fr:{kicker:'Projet phare',slogan:'Plateforme de suivi des médicaments pour personnes âgées et leurs proches',desc:'Application web qui aide une personne âgée à suivre son traitement au quotidien, rassure sa famille en temps réel et réduit les risques d\u2019oubli ou de double prise, grâce à des rappels sonores et vocaux, un assistant IA et un pilulier connecté simulé.',m1:'Type',m1v:'Projet personnel / académique',m2:'Domaine',m2v:'e-santé · IoT · IA',m3:'Profils',m3v:'Senior · Famille · Admin',f1t:'Tableau de bord et rappels :',f1:'prochaine prise, observance de la semaine, rappels sonores et lecture vocale des consignes.',f2t:'Médicaments et calendrier :',f2:'fiches de traitement, stocks restants, validation médicale, planning et historique des prises.',f3t:'Espace famille :',f3:'suivi bienveillant, alertes de retard et messages d\u2019encouragement vocaux.',f4t:'Pilulier connecté (simulé) :',f4:'28 compartiments, télémétrie ESP32 via API REST et blocage de double dose sous 30 minutes.',f5t:'Assistant IA :',f5:'chatbot Gemini avec garde-fous : aucun diagnostic, aucune modification d\u2019ordonnance.',f6t:'Accessibilité :',f6:'taille du texte réglable, contraste élevé et synthèse vocale en français.',ask:'Demander une démo',demo:'Voir la démo',code:'Code source',s1:'Tableau de bord',s2:'Médicaments',s3:'Pilulier',s4:'Assistant IA',note:'Données de démonstration fictives. Le pilulier est simulé côté serveur.'},
+    en:{kicker:'Featured project',slogan:'Medication tracking platform for seniors and their families',desc:'A web app that helps older adults follow their treatment every day, reassures their family in real time and reduces missed or double doses, using sound and voice reminders, an AI assistant and a simulated connected pillbox.',m1:'Type',m1v:'Personal / academic project',m2:'Field',m2v:'e-health · IoT · AI',m3:'Roles',m3v:'Senior · Family · Admin',f1t:'Dashboard and reminders:',f1:'next dose, weekly adherence, sound reminders and spoken instructions.',f2t:'Medications and calendar:',f2:'treatment sheets, remaining stock, medical validation, schedule and intake history.',f3t:'Family space:',f3:'gentle monitoring, late-dose alerts and voice encouragement messages.',f4t:'Connected pillbox (simulated):',f4:'28 compartments, ESP32 telemetry via REST API and a 30-minute double-dose lock.',f5t:'AI assistant:',f5:'Gemini chatbot with safeguards: no diagnosis, no prescription changes.',f6t:'Accessibility:',f6:'adjustable text size, high contrast and French speech synthesis.',ask:'Request a demo',demo:'View demo',code:'Source code',s1:'Dashboard',s2:'Medications',s3:'Pillbox',s4:'AI assistant',note:'Fictional demo data. The pillbox is simulated on the server.'},
+    ar:{kicker:'مشروع مميز',slogan:'منصة لمتابعة الأدوية لكبار السن وعائلاتهم',desc:'تطبيق ويب يساعد كبار السن على متابعة علاجهم يوميا ويطمئن عائلاتهم في الوقت الفعلي ويقلل خطر النسيان أو تكرار الجرعة، عبر تذكيرات صوتية ومساعد ذكي وعلبة أدوية متصلة (محاكاة).',m1:'النوع',m1v:'مشروع شخصي / أكاديمي',m2:'المجال',m2v:'الصحة الرقمية · إنترنت الأشياء · الذكاء الاصطناعي',m3:'الأدوار',m3v:'مسن · عائلة · مسؤول',f1t:'لوحة القيادة والتذكيرات:',f1:'الجرعة القادمة، الالتزام الأسبوعي، تذكيرات صوتية وقراءة التعليمات.',f2t:'الأدوية والتقويم:',f2:'بطاقات العلاج، المخزون المتبقي، المصادقة الطبية، الجدول وسجل الجرعات.',f3t:'فضاء العائلة:',f3:'متابعة لطيفة، تنبيهات التأخير ورسائل تشجيع صوتية.',f4t:'علبة أدوية متصلة (محاكاة):',f4:'28 حجرة، قياسات ESP32 عبر واجهة REST ومنع الجرعة المزدوجة خلال 30 دقيقة.',f5t:'المساعد الذكي:',f5:'روبوت Gemini بضوابط صارمة: لا تشخيص ولا تعديل للوصفات.',f6t:'سهولة الاستخدام:',f6:'حجم خط قابل للتعديل، تباين عال ونطق صوتي بالفرنسية.',ask:'طلب عرض توضيحي',demo:'عرض المشروع',code:'الشيفرة المصدرية',s1:'لوحة القيادة',s2:'الأدوية',s3:'العلبة',s4:'المساعد الذكي',note:'بيانات تجريبية وهمية. العلبة محاكاة على الخادم.'}
+  };
+
+  var CSS = '.dc{margin-top:64px}.dc-card{padding:0;display:grid;grid-template-columns:1.05fr .95fr}.dc-card:hover{transform:none}.dc-body{padding:40px 36px}.dc-kicker{display:inline-flex;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--primary-strong);margin-bottom:14px}html[data-theme="dark"] .dc-kicker{color:#d8b4fe}.dc-title{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:8px}.dc-title span{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}.dc-slogan{font-size:.92rem;font-weight:600;color:var(--muted);margin-bottom:16px}.dc-desc{color:var(--muted);font-size:.96rem;margin-bottom:22px}.dc-meta{display:flex;flex-wrap:wrap;gap:22px;margin-bottom:22px;padding:16px 0;border-block:1px solid var(--border)}.dc-meta b{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}.dc-meta span{font-size:.9rem;font-weight:700}.dc-feats{list-style:none;display:grid;gap:12px;margin-bottom:24px}.dc-feats li{display:flex;gap:12px;font-size:.9rem;color:var(--muted)}.dc-feats li::before{content:"";flex:none;width:8px;height:8px;margin-top:8px;border-radius:50%;background:var(--grad)}.dc-feats strong{color:var(--text);font-weight:700}.dc-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.dc-actions .btn{padding:12px 22px;font-size:.86rem}.dc-visual{padding:28px;background:var(--grad-soft);border-inline-start:1px solid var(--border);display:flex;flex-direction:column;justify-content:center;gap:16px}.dc-frame{border-radius:14px;overflow:hidden;border:1px solid var(--border);background:var(--card-solid);box-shadow:var(--shadow)}.dc-bar{display:flex;gap:6px;padding:9px 12px;border-bottom:1px solid var(--border)}.dc-bar i{width:9px;height:9px;border-radius:50%;background:var(--border)}.dc-frame img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;cursor:zoom-in;transition:opacity .25s ease}.dc-ph{display:none;aspect-ratio:16/10;place-items:center;background:var(--grad);color:#fff;font-weight:800;font-size:1.6rem}.dc-tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.dc-tab{padding:7px 14px;border-radius:99px;font-size:.76rem;font-weight:700;border:1px solid var(--border);background:var(--glass);color:var(--muted);transition:all .25s ease}.dc-tab:hover{color:var(--text)}.dc-tab.on{background:var(--grad);color:#fff;border-color:transparent}.dc-note{font-size:.78rem;color:var(--muted);text-align:center}@media(max-width:1040px){.dc-card{grid-template-columns:1fr}.dc-visual{border-inline-start:0;border-top:1px solid var(--border)}}@media(max-width:640px){.dc-body{padding:28px 22px}.dc-visual{padding:18px}.dc-actions .btn{width:100%}}';
+
+  function t(k) { return '<span data-dc="' + k + '"></span>'; }
+
+  function buildHTML() {
+    var feats = '';
+    for (var i = 1; i <= 6; i++) feats += '<li><span><strong data-dc="f' + i + 't"></strong> ' + t('f' + i) + '</span></li>';
+    var tabs = SHOTS.map(function (s, i) {
+      return '<button type="button" class="dc-tab' + (i ? '' : ' on') + '" data-img="' + s + '" data-dc="s' + (i + 1) + '"></button>';
+    }).join('');
+    var pills = ['React 19','TypeScript','Vite','Tailwind CSS','Node.js · Express','Gemini API','Web Speech API'].map(function (p) { return '<span class="tag-pill">' + p + '</span>'; }).join('');
+    return '<article class="card dc-card"><div class="dc-body"><span class="dc-kicker" data-dc="kicker"></span><h3 class="dc-title">Dawa<span>Care</span></h3><p class="dc-slogan" data-dc="slogan"></p><p class="dc-desc" data-dc="desc"></p><div class="dc-meta">' + [1,2,3].map(function(n){return '<div><b data-dc="m'+n+'"></b><span data-dc="m'+n+'v"></span></div>';}).join('') + '</div><ul class="dc-feats">' + feats + '</ul><div class="tags">' + pills + '</div><div class="dc-actions" id="dcActions"><a href="#contact" class="btn btn-primary" id="dcDemoAsk" data-dc="ask"></a></div></div><div class="dc-visual"><div class="dc-frame"><div class="dc-bar"><i></i><i></i><i></i></div><img id="dcImg" src="' + IMG_BASE + 'dashboard.webp" alt="DawaCare" loading="lazy"><div class="dc-ph" id="dcPh">DawaCare</div></div><div class="dc-tabs">' + tabs + '</div><p class="dc-note" data-dc="note"></p></div></article>';
   }
 
-  applyLang(savedLang);
-  updateActive();
-})();
+  function findHost() {
+    var sels = ['#projects .container', '#projects .grid', '#projects', 'main .container', 'main', 'body'];
+    for (var i = 0; i < sels.length; i++) { var el = document.querySelector(sels[i]); if (el) return el; }
+    return null;
+  }
 
+  function mount() {
+    if (document.getElementById('dawacare')) return;
+    var host = findHost();
+    if (!host) return;
+    var st = document.createElement('style'); st.textContent = CSS; document.head.appendChild(st);
+    var box = document.createElement('div'); box.className = 'dc'; box.id = 'dawacare'; box.innerHTML = buildHTML();
+    host.appendChild(box);
+    var root = document.documentElement;
+    var img = document.getElementById('dcImg'), ph = document.getElementById('dcPh');
+
+    function tr() {
+      var d = D[root.lang] || D.fr;
+      box.querySelectorAll('[data-dc]').forEach(function (el) { var v = d[el.getAttribute('data-dc')]; if (v !== undefined) el.textContent = v; });
+      var on = box.querySelector('.dc-tab.on'); if (on) img.alt = 'DawaCare — ' + on.textContent;
+    }
+
+    var act = document.getElementById('dcActions'), ask = document.getElementById('dcDemoAsk');
+    [['demo','btn btn-primary'],['code','btn btn-ghost']].forEach(function (p) {
+      if (!LINKS[p[0]]) return;
+      var a = document.createElement('a'); a.href = LINKS[p[0]]; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = p[1]; a.setAttribute('data-dc', p[0]);
+      act.insertBefore(a, ask);
+    });
+    if (LINKS.demo) ask.className = 'btn btn-ghost';
+
+    img.addEventListener('error', function () { img.style.display = 'none'; ph.style.display = 'grid'; });
+    img.addEventListener('load', function () { img.style.display = ''; ph.style.display = 'none'; });
+    box.querySelectorAll('.dc-tab').forEach(function (b) {
+      b.addEventListener('click', function () {
+        box.querySelectorAll('.dc-tab').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on');
+        img.style.opacity = 0;
+        setTimeout(function () { img.src = IMG_BASE + b.getAttribute('data-img') + '.webp'; img.alt = 'DawaCare — ' + b.textContent; img.style.opacity = 1; }, 160);
+      });
+    });
+    img.addEventListener('click', function () {
+      var lb = document.getElementById('lightbox'); if (!lb) return;
+      var li = lb.querySelector('.lb-img'), le = lb.querySelector('.lb-emoji'), lc = lb.querySelector('.lb-caption');
+      li.src = img.src; li.alt = img.alt; li.classList.add('show'); le.style.display = 'none'; lc.textContent = img.alt; lb.classList.add('open');
+    });
+    var btns = document.querySelectorAll('.lang-btn');
+    function setLang(l) {
+      root.lang = l; root.dir = l === 'ar' ? 'rtl' : 'ltr';
+      btns.forEach(function (b) { b.classList.toggle('active', b.dataset.lang === l); });
+      try { localStorage.setItem('yd-lang', l); } catch (e) {}
+      tr();
+    }
+    btns.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+    var saved = null; try { saved = localStorage.getItem('yd-lang'); } catch (e) {}
+    if (saved && D[saved]) setLang(saved); else tr();
+  }
+
+  function fixCV() {
+    var cv = document.querySelector('a[download]'); if (!cv) return;
+    cv.addEventListener('click', function (e) {
+      e.preventDefault();
+      fetch(cv.getAttribute('href'), { cache: 'no-store' })
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.blob(); })
+        .then(function (blob) {
+          var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'CV_YATHREB_DELLAI.pdf';
+          document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(function () { URL.revokeObjectURL(a.href); }, 1500);
+        })
+        .catch(function () {});
+    });
+  }
+
+  function navFx() {
+    var h = document.getElementById('header');
+    var secs = [].slice.call(document.querySelectorAll('main section[id]'));
+    if (!secs.length) return;
+    function on() {
+      if (h) h.classList.toggle('scrolled', window.scrollY > 10);
+      var y = window.scrollY + 140, cur = secs[0].id;
+      secs.forEach(function (s) { if (s.offsetTop <= y) cur = s.id; });
+      document.querySelectorAll('#nav a').forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
+    }
+    window.addEventListener('scroll', on, { passive: true }); on();
+  }
+
+  function init() { try { mount(); } catch (e) {} try { fixCV(); } catch (e) {} try { navFx(); } catch (e) {} }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
+
 </body>
 </html>
