@@ -54,6 +54,11 @@
     try{
       var t = localStorage.getItem('yd-theme');
       if(t) document.documentElement.dataset.theme = t;
+      var l = localStorage.getItem('yd-lang');
+      if(l){
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+      }
     }catch(e){}
   })();
 </script>
@@ -1095,9 +1100,9 @@ footer{
   <section id="gallery" aria-labelledby="gallery-heading">
     <div class="container">
       <div class="sec-head reveal">
-        <span class="tag">Galerie & Réalisations</span>
-        <h2 id="gallery-heading" class="sec-title">Projets & <span class="grad">Vie Académique</span></h2>
-        <p class="sec-sub">Aperçu de mon parcours en Business Computing à l'ESSECT Tunis</p>
+        <span class="tag" data-i18n="gallery.tag">Galerie & Réalisations</span>
+        <h2 id="gallery-heading" class="sec-title" data-i18n="gallery.title">Projets & <span class="grad">Vie Académique</span></h2>
+        <p class="sec-sub" data-i18n="gallery.sub">Aperçu de mon parcours en Business Computing à l'ESSECT Tunis</p>
       </div>
 
       <div class="grid">
@@ -1337,16 +1342,14 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
 <!-- ============================================================
-     SCRIPT DAWACARE (Inline: 100% garanti sans erreur 404)
+     SCRIPT DAWACARE (Inline)
      ============================================================ -->
 <script>
 (function () {
   'use strict';
   var LINKS = { demo: '', code: '' };
   var SHOTS = ['dashboard', 'medications', 'pillbox', 'assistant'];
-  
-  // L'image se trouve à la racine, donc on laisse IMG_BASE vide.
-  var IMG_BASE = ''; 
+  var IMG_BASE = '';
 
   var D = {
     fr:{kicker:'Projet phare',slogan:'Plateforme de suivi des médicaments pour personnes âgées et leurs proches',desc:'Application web qui aide une personne âgée à suivre son traitement au quotidien, rassure sa famille en temps réel et réduit les risques d\u2019oubli ou de double prise, grâce à des rappels sonores et vocaux, un assistant IA et un pilulier connecté simulé.',m1:'Type',m1v:'Projet personnel / académique',m2:'Domaine',m2v:'e-santé · IoT · IA',m3:'Profils',m3v:'Senior · Famille · Admin',f1t:'Tableau de bord et rappels :',f1:'prochaine prise, observance de la semaine, rappels sonores et lecture vocale des consignes.',f2t:'Médicaments et calendrier :',f2:'fiches de traitement, stocks restants, validation médicale, planning et historique des prises.',f3t:'Espace famille :',f3:'suivi bienveillant, alertes de retard et messages d\u2019encouragement vocaux.',f4t:'Pilulier connecté (simulé) :',f4:'28 compartiments, télémétrie ESP32 via API REST et blocage de double dose sous 30 minutes.',f5t:'Assistant IA :',f5:'chatbot Gemini avec garde-fous : aucun diagnostic, aucune modification d\u2019ordonnance.',f6t:'Accessibilité :',f6:'taille du texte réglable, contraste élevé et synthèse vocale en français.',ask:'Demander une démo',demo:'Voir la démo',code:'Code source',s1:'Tableau de bord',s2:'Médicaments',s3:'Pilulier',s4:'Assistant IA',note:'Données de démonstration fictives. Le pilulier est simulé côté serveur.'},
@@ -1419,9 +1422,14 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
       try { localStorage.setItem('yd-lang', l); } catch (e) {}
       tr();
     }
+    /* Écoute passive : le script I18N principal gère l'interface, DawaCare se resynchronise */
     btns.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
     var saved = null; try { saved = localStorage.getItem('yd-lang'); } catch (e) {}
     if (saved && D[saved]) setLang(saved); else tr();
+
+    /* Observer : si un autre script change la langue, on resynchronise DawaCare */
+    var mo = new MutationObserver(function(){ tr(); });
+    mo.observe(root, { attributes: true, attributeFilter: ['lang'] });
   }
 
   function fixCV() {
@@ -1454,6 +1462,234 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   function init() { try { mount(); } catch (e) {} try { fixCV(); } catch (e) {} try { navFx(); } catch (e) {} }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+
+<!-- ============================================================
+     I18N — TRADUCTIONS FR / EN / AR
+     ============================================================ -->
+<script>
+(function(){
+'use strict';
+
+var I18N = {
+  fr: {
+    "nav.home":"Accueil","nav.skills":"Compétences","nav.projects":"Projets",
+    "nav.certs":"Certifications","nav.gallery":"Galerie","nav.contact":"Contact",
+
+    "hero.badge":"Disponible pour un stage",
+    "hero.greet":"Bonjour, je suis",
+    "hero.role":"Étudiante en Business Computing",
+    "hero.sub":"Licence Business Computing · 3ᵉ année · ESSECT Tunis",
+    "hero.desc":"Passionnée par le développement web, les bases de données et l'analyse de données. Je construis des solutions concrètes à l'intersection du code et du business.",
+    "hero.cv":"Télécharger CV",
+    "hero.contact":"Me contacter",
+
+    "stats.exp":"Années d'études","stats.proj":"Projets Réalisés","stats.motiv":"Motivation",
+
+    "chip.1":"Stage PFE / Été","chip.2":"Power BI & SQL","chip.3":"Développement Web",
+
+    "skills.tag":"Expertise",
+    "skills.title":"Mes <span class='grad'>Compétences</span>",
+    "skills.sub":"Un équilibre entre compétences techniques et vision gestion / business.",
+    "sk.web.title":"Développement Web","sk.web.desc":"HTML, CSS, JavaScript et intégration responsive.","sk.web.lvl":"Maîtrise",
+    "sk.db.title":"Bases de Données & SQL","sk.db.desc":"Modélisation, requêtes SQL, SGBD et gestion de données.","sk.db.lvl":"Maîtrise",
+    "sk.data.title":"Analyse & Power BI","sk.data.desc":"Visualisation de données et Business Intelligence.","sk.data.lvl":"Maîtrise",
+    "sk.auto.title":"Automatisation & Java","sk.auto.desc":"Programmation orientée objet Java et workflows n8n.","sk.auto.lvl":"Maîtrise",
+
+    "proj.tag":"Portfolio",
+    "proj.title":"Projets <span class='grad'>Académiques</span>",
+    "proj.sub":"Quelques réalisations illustrant mon parcours en Business Computing.",
+    "p1.title":"Plateforme Web Étudiante","p1.desc":"Développement d'un site web interactif avec HTML, CSS et JavaScript pour la gestion d'activités académiques.",
+    "p2.title":"Tableau de Bord Power BI","p2.desc":"Conception de dashboards décisionnels pour l'analyse de performances d'entreprise et aide à la décision.",
+    "p3.title":"Application & Base de Données SQL","p3.desc":"Modélisation conceptuelle et relationnelle d'une base de données de gestion de stock avec requêtes SQL avancées.",
+
+    "cert.tag":"Formations",
+    "cert.title":"Mes <span class='grad'>Certifications</span>",
+    "cert.sub":"Apprentissage continu et approfondissement des compétences techniques.",
+    "c1.title":"Business Computing Essentials","c1.desc":"ESSECT Tunis — Formations et ateliers pratiques en informatique de gestion.",
+    "c2.title":"Développement Web & Bases","c2.desc":"Certificats de compétences en programmation web et structures de données.",
+    "c3.title":"Analyse de Données & BI","c3.desc":"Initiation aux outils de Business Intelligence et Power BI.",
+
+    "gallery.tag":"Galerie & Réalisations",
+    "gallery.title":"Projets & <span class='grad'>Vie Académique</span>",
+    "gallery.sub":"Aperçu de mon parcours en Business Computing à l'ESSECT Tunis",
+    "g1":"Travail d'équipe & Projets","g2":"Analyse de données & BI","g3":"Bases de données SQL",
+    "g4":"Programmation Java","g5":"Travail collaboratif & Workflow","g6":"Vie de campus (ESSECT Tunis)",
+
+    "contact.tag":"Contact",
+    "contact.title":"Restons en <span class='grad'>Contact</span>",
+    "contact.sub":"À la recherche d'un stage ou d'une opportunité collaborative ? Écrivez-moi !",
+    "info.email":"Email","info.phone":"Téléphone","info.loc":"Localisation","info.city":"Tunis, Tunisie","info.uni":"Université",
+
+    "form.name":"Votre Nom","form.email":"Votre Email","form.msg":"Votre Message",
+    "form.send":"Envoyer le message","form.success":"Message envoyé avec succès !",
+
+    "footer.role":"Étudiante en Business Computing à l'ESSECT Tunis"
+  },
+
+  en: {
+    "nav.home":"Home","nav.skills":"Skills","nav.projects":"Projects",
+    "nav.certs":"Certifications","nav.gallery":"Gallery","nav.contact":"Contact",
+
+    "hero.badge":"Available for an internship",
+    "hero.greet":"Hello, I'm",
+    "hero.role":"Business Computing Student",
+    "hero.sub":"Bachelor in Business Computing · 3rd year · ESSECT Tunis",
+    "hero.desc":"Passionate about web development, databases and data analysis. I build concrete solutions at the intersection of code and business.",
+    "hero.cv":"Download CV",
+    "hero.contact":"Contact me",
+
+    "stats.exp":"Years of study","stats.proj":"Projects Completed","stats.motiv":"Motivation",
+
+    "chip.1":"Final-year Internship / Summer","chip.2":"Power BI & SQL","chip.3":"Web Development",
+
+    "skills.tag":"Expertise",
+    "skills.title":"My <span class='grad'>Skills</span>",
+    "skills.sub":"A balance between technical skills and business vision.",
+    "sk.web.title":"Web Development","sk.web.desc":"HTML, CSS, JavaScript and responsive integration.","sk.web.lvl":"Proficiency",
+    "sk.db.title":"Databases & SQL","sk.db.desc":"Data modeling, SQL queries, DBMS and data management.","sk.db.lvl":"Proficiency",
+    "sk.data.title":"Analysis & Power BI","sk.data.desc":"Data visualization and Business Intelligence.","sk.data.lvl":"Proficiency",
+    "sk.auto.title":"Automation & Java","sk.auto.desc":"Java object-oriented programming and n8n workflows.","sk.auto.lvl":"Proficiency",
+
+    "proj.tag":"Portfolio",
+    "proj.title":"<span class='grad'>Academic</span> Projects",
+    "proj.sub":"A few projects illustrating my journey in Business Computing.",
+    "p1.title":"Student Web Platform","p1.desc":"Development of an interactive website with HTML, CSS and JavaScript for managing academic activities.",
+    "p2.title":"Power BI Dashboard","p2.desc":"Design of decision-making dashboards for business performance analysis and decision support.",
+    "p3.title":"Application & SQL Database","p3.desc":"Conceptual and relational modeling of a stock management database with advanced SQL queries.",
+
+    "cert.tag":"Training",
+    "cert.title":"My <span class='grad'>Certifications</span>",
+    "cert.sub":"Continuous learning and deepening of technical skills.",
+    "c1.title":"Business Computing Essentials","c1.desc":"ESSECT Tunis — Training and hands-on workshops in management computing.",
+    "c2.title":"Web Development & Fundamentals","c2.desc":"Skill certificates in web programming and data structures.",
+    "c3.title":"Data Analysis & BI","c3.desc":"Introduction to Business Intelligence tools and Power BI.",
+
+    "gallery.tag":"Gallery & Work",
+    "gallery.title":"<span class='grad'>Academic</span> Life & Projects",
+    "gallery.sub":"A glimpse of my journey in Business Computing at ESSECT Tunis",
+    "g1":"Teamwork & Projects","g2":"Data Analysis & BI","g3":"SQL Databases",
+    "g4":"Java Programming","g5":"Collaborative Work & Workflow","g6":"Campus Life (ESSECT Tunis)",
+
+    "contact.tag":"Contact",
+    "contact.title":"Let's Stay in <span class='grad'>Touch</span>",
+    "contact.sub":"Looking for an internship or a collaborative opportunity? Write to me!",
+    "info.email":"Email","info.phone":"Phone","info.loc":"Location","info.city":"Tunis, Tunisia","info.uni":"University",
+
+    "form.name":"Your Name","form.email":"Your Email","form.msg":"Your Message",
+    "form.send":"Send message","form.success":"Message sent successfully!",
+
+    "footer.role":"Business Computing Student at ESSECT Tunis"
+  },
+
+  ar: {
+    "nav.home":"الرئيسية","nav.skills":"المهارات","nav.projects":"المشاريع",
+    "nav.certs":"الشهادات","nav.gallery":"المعرض","nav.contact":"اتصل بي",
+
+    "hero.badge":"متاحة للتدريب",
+    "hero.greet":"مرحباً، أنا",
+    "hero.role":"طالبة في الإعلامية الإدارية",
+    "hero.sub":"إجازة في الإعلامية الإدارية · السنة الثالثة · ESSECT تونس",
+    "hero.desc":"شغوفة بتطوير الويب وقواعد البيانات وتحليل البيانات. أبني حلولاً ملموسة في تقاطع البرمجة والأعمال.",
+    "hero.cv":"تحميل السيرة الذاتية",
+    "hero.contact":"تواصل معي",
+
+    "stats.exp":"سنوات الدراسة","stats.proj":"مشاريع منجزة","stats.motiv":"الحماس",
+
+    "chip.1":"تدريب نهاية الدراسة / الصيف","chip.2":"Power BI و SQL","chip.3":"تطوير الويب",
+
+    "skills.tag":"الخبرات",
+    "skills.title":"<span class='grad'>مهاراتي</span>",
+    "skills.sub":"توازن بين المهارات التقنية والرؤية الإدارية والأعمال.",
+    "sk.web.title":"تطوير الويب","sk.web.desc":"HTML، CSS، JavaScript والتكامل المتجاوب.","sk.web.lvl":"الإتقان",
+    "sk.db.title":"قواعد البيانات و SQL","sk.db.desc":"النمذجة، استعلامات SQL، أنظمة إدارة قواعد البيانات وإدارة البيانات.","sk.db.lvl":"الإتقان",
+    "sk.data.title":"التحليل و Power BI","sk.data.desc":"تصوير البيانات وذكاء الأعمال.","sk.data.lvl":"الإتقان",
+    "sk.auto.title":"الأتمتة و Java","sk.auto.desc":"البرمجة الكائنية بـ Java ومسارات عمل n8n.","sk.auto.lvl":"الإتقان",
+
+    "proj.tag":"المشاريع",
+    "proj.title":"مشاريع <span class='grad'>أكاديمية</span>",
+    "proj.sub":"بعض الإنجازات التي توضح مسيرتي في الإعلامية الإدارية.",
+    "p1.title":"منصة ويب للطلاب","p1.desc":"تطوير موقع ويب تفاعلي بـ HTML و CSS و JavaScript لإدارة الأنشطة الأكاديمية.",
+    "p2.title":"لوحة قيادة Power BI","p2.desc":"تصميم لوحات قيادة لدعم القرار وتحليل أداء المؤسسة.",
+    "p3.title":"تطبيق وقاعدة بيانات SQL","p3.desc":"النمذجة المفاهيمية والعلائقية لقاعدة بيانات إدارة المخزون مع استعلامات SQL متقدمة.",
+
+    "cert.tag":"التكوينات",
+    "cert.title":"<span class='grad'>شهاداتي</span>",
+    "cert.sub":"تعلّم مستمر وتعميق للمهارات التقنية.",
+    "c1.title":"أساسيات الإعلامية الإدارية","c1.desc":"ESSECT تونس — تكوينات وورشات عملية في الإعلامية الإدارية.",
+    "c2.title":"تطوير الويب والأساسيات","c2.desc":"شهادات مهارات في البرمجة الويب وهياكل البيانات.",
+    "c3.title":"تحليل البيانات وذكاء الأعمال","c3.desc":"مقدمة في أدوات ذكاء الأعمال و Power BI.",
+
+    "gallery.tag":"المعرض والإنجازات",
+    "gallery.title":"الحياة <span class='grad'>الأكاديمية</span> والمشاريع",
+    "gallery.sub":"لمحة عن مسيرتي في الإعلامية الإدارية بـ ESSECT تونس",
+    "g1":"العمل الجماعي والمشاريع","g2":"تحليل البيانات وذكاء الأعمال","g3":"قواعد بيانات SQL",
+    "g4":"برمجة Java","g5":"العمل التعاوني وسير العمل","g6":"الحياة الجامعية (ESSECT تونس)",
+
+    "contact.tag":"التواصل",
+    "contact.title":"لنبقَ على <span class='grad'>تواصل</span>",
+    "contact.sub":"تبحث عن تدريب أو فرصة تعاونية؟ اكتب لي!",
+    "info.email":"البريد الإلكتروني","info.phone":"الهاتف","info.loc":"الموقع","info.city":"تونس، تونس","info.uni":"الجامعة",
+
+    "form.name":"اسمك","form.email":"بريدك الإلكتروني","form.msg":"رسالتك",
+    "form.send":"إرسال الرسالة","form.success":"تم إرسال الرسالة بنجاح!",
+
+    "footer.role":"طالبة في الإعلامية الإدارية بـ ESSECT تونس"
+  }
+};
+
+var root = document.documentElement;
+var currentLang = 'fr';
+
+function applyLang(lang){
+  if(!I18N[lang]) lang = 'fr';
+  currentLang = lang;
+  var t = I18N[lang];
+
+  root.lang = lang;
+  root.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k = el.getAttribute('data-i18n');
+    if(t[k] !== undefined){
+      if(el.children.length > 0){
+        el.innerHTML = t[k];
+      } else {
+        el.textContent = t[k];
+      }
+    }
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+
+  document.title = (lang === 'ar')
+    ? 'يثرب الدلاي — الإعلامية الإدارية · ESSECT'
+    : 'Yathreb Dellai — Business Computing · ESSECT';
+
+  try{ localStorage.setItem('yd-lang', lang); }catch(e){}
+}
+
+document.querySelectorAll('.lang-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    applyLang(btn.getAttribute('data-lang'));
+  });
+});
+
+(function initLang(){
+  var saved = null;
+  try{ saved = localStorage.getItem('yd-lang'); }catch(e){}
+  if(!saved){
+    var navLang = (navigator.language || 'fr').toLowerCase();
+    if(navLang.indexOf('ar') === 0) saved = 'ar';
+    else if(navLang.indexOf('en') === 0) saved = 'en';
+    else saved = 'fr';
+  }
+  applyLang(saved);
+})();
+
 })();
 </script>
 
